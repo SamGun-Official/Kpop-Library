@@ -7,7 +7,9 @@ import 'package:permission_handler/permission_handler.dart';
 
 class EditorScreen extends StatelessWidget {
   static const routeName = '/editor';
+
   const EditorScreen({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(

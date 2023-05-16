@@ -13,22 +13,34 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
+  ThemeData _initTheme(ColorScheme scheme) {
+    return ThemeData(
+      colorScheme: scheme,
+      pageTransitionsTheme: const PageTransitionsTheme(
+        builders: {
+          TargetPlatform.android: FadeUpwardsPageTransitionsBuilder(),
+          TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
+        },
+      ),
+      splashColor: Colors.transparent,
+      useMaterial3: true,
+      visualDensity: VisualDensity.adaptivePlatformDensity,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Kpop Library',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        pageTransitionsTheme: const PageTransitionsTheme(
-          builders: {
-            TargetPlatform.android: FadeUpwardsPageTransitionsBuilder(),
-            TargetPlatform.iOS: CupertinoPageTransitionsBuilder(),
-          },
-        ),
-        splashColor: Colors.transparent,
-        useMaterial3: true,
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
+      theme: _initTheme(ColorScheme.fromSeed(
+        brightness: Brightness.light,
+        seedColor: Colors.deepPurple,
+      )),
+      darkTheme: _initTheme(ColorScheme.fromSeed(
+        brightness: Brightness.dark,
+        seedColor: Colors.deepPurple,
+      )),
+      themeMode: ThemeMode.light,
       initialRoute: HomeScreen.routeName,
       routes: {
         HomeScreen.routeName: (context) => const HomeScreen(),

@@ -9,15 +9,10 @@ class ArtistScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Artist"),
+    return SafeArea(
+      child: Column(
+        children: [],
       ),
-      body: Column(
-        children: [
-        ],
-      ),
-      // bottomNavigationBar: const AppNavigationBar(),
     );
   }
 }

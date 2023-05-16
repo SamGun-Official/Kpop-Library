@@ -15,8 +15,8 @@ class HomeScreen extends StatelessWidget {
         children: [
           ElevatedButton(
             style: ButtonStyle(
-              backgroundColor: MaterialStateProperty.all<Color>(Colors.amber),
-            ),
+                // backgroundColor: MaterialStateProperty.all<Color>(Colors.amber),
+                ),
             onPressed: () {
               Navigator.pushNamed(context, ArtistScreen.routeName);
             },
