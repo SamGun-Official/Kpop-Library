@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kpop_library/components/app_navigation_bar.dart';
 import 'package:kpop_library/home.dart';
-import 'package:kpop_library/editor.dart';
 import 'package:kpop_library/view/artist.dart';
 
 GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
@@ -44,7 +43,6 @@ class MyApp extends StatelessWidget {
       initialRoute: HomeScreen.routeName,
       routes: {
         HomeScreen.routeName: (context) => const HomeScreen(),
-        EditorScreen.routeName: (context) => const EditorScreen(),
         ArtistScreen.routeName: (context) => const ArtistScreen(),
         // DetailNewsScreen.routeName: (context) => DetailNewsScreen(
         //   args: ModalRoute.of(context)?.settings.arguments as List,
@@ -86,7 +84,7 @@ class _AppContainerState extends State<AppContainer> {
         break;
       case 1:
         navigatorKey.currentState!.pushNamedAndRemoveUntil(
-          EditorScreen.routeName,
+          ArtistScreen.routeName,
           (route) => false,
         );
         break;
@@ -98,7 +96,7 @@ class _AppContainerState extends State<AppContainer> {
         break;
       case 3:
         navigatorKey.currentState!.pushNamedAndRemoveUntil(
-          EditorScreen.routeName,
+          ArtistScreen.routeName,
           (route) => false,
         );
         break;

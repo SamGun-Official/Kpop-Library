@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-// import 'package:kpop_library/editor.dart';
 import 'package:kpop_library/view/artist.dart';
-// import 'package:kpop_library/components/app_navigation_bar.dart';
 
 class HomeScreen extends StatelessWidget {
   static const routeName = '/home';
@@ -20,7 +18,7 @@ class HomeScreen extends StatelessWidget {
             onPressed: () {
               Navigator.pushNamed(context, ArtistScreen.routeName);
             },
-            child: const Text("EDITOR"),
+            child: const Text("Artist"),
           )
         ],
       ),
