@@ -34,28 +34,52 @@ class _InputTypeState extends State<InputType> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: SizedBox(
-          width: MediaQuery.of(context).size.width,
-          height: 50.0,
-          child: Flexible(
-            child: Center(
-              child: SizedBox(
-                width: MediaQuery.of(context).size.width / 3,
-                child: TextField(
-                  controller: _controller,
-                  decoration: const InputDecoration(
-                    hintText: "IU",
-                    labelText: "What do you want to search?",
+        child: Column(
+          children: [
+            SizedBox(
+              width: MediaQuery.of(context).size.width,
+              height: 50.0,
+              child: Row(children: [
+                Flexible(
+                  child: Center(
+                    child: SizedBox(
+                      width: MediaQuery.of(context).size.width,
+                      child: TextField(
+                        controller: _controller,
+                        decoration: const InputDecoration(
+                          hintText: "IU",
+                          labelText: "What do you want to search?",
+                        ),
+                        onChanged: (String value) {
+                          setState(() {
+                            keyword = value;
+                          });
+                        },
+                      ),
+                    ),
                   ),
-                  onChanged: (String value) {
-                    setState(() {
-                      keyword = value;
-                    });
-                  },
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 16.0),
+                  child: ElevatedButton(
+                    child: const Text("Search"),
+                    onPressed: () {},
+                  ),
+                ),
+              ]),
+            ),
+            Expanded(
+              child: Padding(
+                padding: const EdgeInsets.only(top: 16.0),
+                child: Container(
+                  decoration: const BoxDecoration(
+                    color: Colors.black38,
+                  ),
+                  child: const Center(child: Text("Your search result will appear here!", style: TextStyle(fontWeight: FontWeight.w500))),
                 ),
               ),
             ),
-          ),
+          ],
         ),
       ),
     );

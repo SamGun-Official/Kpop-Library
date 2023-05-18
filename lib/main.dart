@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
   ThemeData _initTheme(ColorScheme scheme) {
     return ThemeData(
       colorScheme: scheme,
+      fontFamily: "Montserrat",
       pageTransitionsTheme: const PageTransitionsTheme(
         builders: {
           TargetPlatform.android: FadeUpwardsPageTransitionsBuilder(),
