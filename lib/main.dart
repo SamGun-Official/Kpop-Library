@@ -44,9 +44,6 @@ class MyApp extends StatelessWidget {
       routes: {
         HomeScreen.routeName: (context) => const HomeScreen(),
         ArtistScreen.routeName: (context) => ArtistScreen(args: ModalRoute.of(context)?.settings.arguments as List<dynamic>),
-        // DetailNewsScreen.routeName: (context) => DetailNewsScreen(
-        //   args: ModalRoute.of(context)?.settings.arguments as List,
-        // ),
       },
       navigatorKey: navigatorKey,
       builder: (context, child) {
