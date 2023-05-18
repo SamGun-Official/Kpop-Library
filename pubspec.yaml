@@ -31,6 +31,8 @@ dependencies:
   flutter:
     sdk: flutter
 
+  http: ^0.13.6
+
   # Symlink required ("Developer Mode" must be turned on)
   # flutter_media_metadata: ^1.0.0
   # metadata_god: ^0.4.1
