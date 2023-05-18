@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:kpop_library/components/app_navigation_bar.dart';
-import 'package:kpop_library/home.dart';
-import 'package:kpop_library/view/list_artist.dart';
+import 'package:kpop_library/view/artist_detail.dart';
+import 'package:kpop_library/view/home.dart';
 
 GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
@@ -43,7 +43,7 @@ class MyApp extends StatelessWidget {
       initialRoute: HomeScreen.routeName,
       routes: {
         HomeScreen.routeName: (context) => const HomeScreen(),
-        // ArtistScreen.routeName: (context) => const ArtistScreen(),
+        ArtistScreen.routeName: (context) => ArtistScreen(args: ModalRoute.of(context)?.settings.arguments as List<dynamic>),
         // DetailNewsScreen.routeName: (context) => DetailNewsScreen(
         //   args: ModalRoute.of(context)?.settings.arguments as List,
         // ),

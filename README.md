@@ -1,4 +1,4 @@
-# dicoding_project
+# kpop_library
 
 A new Flutter project to accommodate Dicoding's flutter course final project.
 

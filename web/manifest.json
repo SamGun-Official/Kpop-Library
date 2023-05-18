@@ -1,6 +1,6 @@
 {
-    "name": "dicoding_project",
-    "short_name": "dicoding_project",
+    "name": "kpop_library",
+    "short_name": "kpop_library",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

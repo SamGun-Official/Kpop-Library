@@ -89,13 +89,13 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "com.samgun_official.dicoding_project" "\0"
-            VALUE "FileDescription", "dicoding_project" "\0"
+            VALUE "CompanyName", "com.samgun_official.kpop_library" "\0"
+            VALUE "FileDescription", "kpop_library" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "dicoding_project" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2023 com.samgun_official.dicoding_project. All rights reserved." "\0"
-            VALUE "OriginalFilename", "dicoding_project.exe" "\0"
-            VALUE "ProductName", "dicoding_project" "\0"
+            VALUE "InternalName", "kpop_library" "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2023 com.samgun_official.kpop_library. All rights reserved." "\0"
+            VALUE "OriginalFilename", "kpop_library.exe" "\0"
+            VALUE "ProductName", "kpop_library" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END
