@@ -145,7 +145,10 @@ class _ArtistDataState extends State<ArtistData> {
                                     ),
                                   ],
                                 ),
-                                Text(artists[0].profileDesc),
+                                Text(
+                                  artists[0].profileDesc,
+                                  style: const TextStyle(fontSize: 16.0),
+                                ),
                               ],
                             ),
                           ),

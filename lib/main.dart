@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kpop_library/components/app_navigation_bar.dart';
 import 'package:kpop_library/view/artist_detail.dart';
 import 'package:kpop_library/view/home.dart';
+import 'package:kpop_library/view/search.dart';
 
 GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
 
@@ -44,6 +45,7 @@ class MyApp extends StatelessWidget {
       routes: {
         HomeScreen.routeName: (context) => const HomeScreen(),
         ArtistScreen.routeName: (context) => ArtistScreen(args: ModalRoute.of(context)?.settings.arguments as List<dynamic>),
+        SearchScreen.routeName: (context) => const SearchScreen(),
       },
       navigatorKey: navigatorKey,
       builder: (context, child) {
@@ -81,22 +83,22 @@ class _AppContainerState extends State<AppContainer> {
         break;
       case 1:
         navigatorKey.currentState!.pushNamedAndRemoveUntil(
-          HomeScreen.routeName,
+          SearchScreen.routeName,
           (route) => false,
         );
         break;
-      case 2:
-        navigatorKey.currentState!.pushNamedAndRemoveUntil(
-          HomeScreen.routeName,
-          (route) => false,
-        );
-        break;
-      case 3:
-        navigatorKey.currentState!.pushNamedAndRemoveUntil(
-          HomeScreen.routeName,
-          (route) => false,
-        );
-        break;
+      // case 2:
+      //   navigatorKey.currentState!.pushNamedAndRemoveUntil(
+      //     HomeScreen.routeName,
+      //     (route) => false,
+      //   );
+      //   break;
+      // case 3:
+      //   navigatorKey.currentState!.pushNamedAndRemoveUntil(
+      //     HomeScreen.routeName,
+      //     (route) => false,
+      //   );
+      //   break;
     }
   }
 
